@@ -106,7 +106,7 @@ public class telacalculadora extends javax.swing.JFrame {
 
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
         // TODO add your handling code here:
-        int ano = Integer.parseInt(txtANO.getValue().toString());
+        int ano = Integer.parseInt(txtANO.getValue().toString()); 
         int idade = 2025 - ano;
         lblIdade.setText(Integer.toString(idade));
     }//GEN-LAST:event_btnCalcActionPerformed

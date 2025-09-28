@@ -4,6 +4,8 @@
  */
 package prg03jeffersonbatista;
 
+import br.com.ifba.atividade03.view.telacalculadora;
+
 /**
  *
  * @author jeffe
@@ -15,7 +17,12 @@ public class Prg03JeffersonBatista {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.print("Hello World");
+            java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            new telacalculadora().setVisible(true);
+        }
+    });
+
     }
     
 }
