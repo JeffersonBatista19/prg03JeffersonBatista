@@ -107,8 +107,11 @@ public class telacalculadora extends javax.swing.JFrame {
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
         // TODO add your handling code here:
         int ano = Integer.parseInt(txtANO.getValue().toString()); 
+         // Pega o valor digitado no campo txtANO/ converte para String/ converte para inteiro (ano de nascimento).
         int idade = 2025 - ano;
+        // Calcula a idade com base no ano atual
         lblIdade.setText(Integer.toString(idade));
+        // Converte a idade de inteiro para String e exibe no rótulo lblIdade.
     }//GEN-LAST:event_btnCalcActionPerformed
 
     /**
