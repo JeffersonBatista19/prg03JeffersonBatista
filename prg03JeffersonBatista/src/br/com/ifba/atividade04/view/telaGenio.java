@@ -15,6 +15,8 @@ public class telaGenio extends javax.swing.JFrame {
      */
     public telaGenio() {
         initComponents();
+        Frase.setText("<html>Pensarei em um valor entre 1 e 5. Tente adivinhar!!!</html>");
+        //os htmls fazem a quebra de linha na área do texto que foi colocada no design da interface 
     }
 
     /**
@@ -41,10 +43,10 @@ public class telaGenio extends javax.swing.JFrame {
 
         Frase.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Frase.setForeground(new java.awt.Color(0, 0, 0));
-        Frase.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Frase.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Frase.setText("Frase");
         Frase.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        getContentPane().add(Frase, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 150, 70));
+        getContentPane().add(Frase, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 150, 60));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/images/balon.png"))); // NOI18N
@@ -72,6 +74,15 @@ public class telaGenio extends javax.swing.JFrame {
 
     private void btnPalpiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPalpiteActionPerformed
         // TODO add your handling code here:
+        double n = 1 + Math.random() * (6 -1); //Gera numeros aleatórios de 1 a 5
+        int valor =(int) n; //Converte o numero para inteiro 
+        
+        int num = Integer.parseInt(txtVal.getValue().toString());
+        String f1= "<html>Acertou!!!</html>";
+        String f2= "<html>Errooou! Eu pensei no valor " + valor + "</html>";
+        
+        String result= (valor == num)?f1:f2;//ao acertar mostra f1, ao errar mostra f2
+        Frase.setText(result);
     }//GEN-LAST:event_btnPalpiteActionPerformed
 
     /**
