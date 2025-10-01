@@ -155,24 +155,38 @@ public class telaSlider extends javax.swing.JFrame {
 
     private void btnContActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContActionPerformed
         // TODO add your handling code here:
+        int i = slidInicio.getValue(); 
+        int f = slidFim.getValue();
+        int p = slidPasso.getValue();
+        //i, f, p pega o valor atual dos botões slider
+        
+        DefaultListModel lista = new DefaultListModel();
+        //cria um modelo de lista para guardar os valores que serão contados
+        
+        for (int c = i; c <= f; c += p){
+            lista.addElement(c);
+        }
+        //adiciona o número atual do contador na lista pulando de acordo com o valor de p, enquanto c for menor ou igual a f
+        
+        lstCont.setModel(lista);//mostra a lista na interface  
     }//GEN-LAST:event_btnContActionPerformed
 
     private void slidInicioStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slidInicioStateChanged
         // TODO add your handling code here:
-        int i = slidInicio.getValue();
-        Inicio.setText(Integer.toString(i));
+        int i = slidInicio.getValue();//pega o valor atual escolhido no slider
+        Inicio.setText(Integer.toString(i));//mostra o valor na interface
     }//GEN-LAST:event_slidInicioStateChanged
 
     private void slidFimStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slidFimStateChanged
         // TODO add your handling code here:
-        int f = slidFim.getValue();
-        Fim.setText(Integer.toString(f));
+        int f = slidFim.getValue();//pega o valor atual escolhido no slider
+        Fim.setText(Integer.toString(f));//mostra o valor na interface
     }//GEN-LAST:event_slidFimStateChanged
 
     private void slidPassoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slidPassoStateChanged
         // TODO add your handling code here:
-        int p = slidPasso.getValue();
-        Passo.setText(Integer.toString(p));
+        int p = slidPasso.getValue();//pega o valor atual escolhido no slider
+        Passo.setText(Integer.toString(p));//mostra o valor na interface
     }//GEN-LAST:event_slidPassoStateChanged
 
     /**
