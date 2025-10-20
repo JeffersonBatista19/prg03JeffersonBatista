@@ -11,17 +11,20 @@ import java.util.List;
  * @author jeffe
  */
 public class PerfilUsuario {
+    //Atributos 
     private Long id;
     private String descricao;
     private List<String> permissoes;
-
+    
+    //Classe construtor 
     public PerfilUsuario(Long id, String descricao, List<String> permissoes) {
         this.id = id;
         this.descricao = descricao;
         this.permissoes = permissoes;
     }
+    //ao ser executado inicializa automaticamente mostrando os atributos
 
-   
+    //m[etodos getters (pegar atributos) e setters (setar ou alterera atributos)
     public Long getId() { 
         return id; 
     }
@@ -46,7 +49,7 @@ public class PerfilUsuario {
         this.permissoes = permissoes; 
     }
 
-    @Override
+    @Override //reescreve o metodo que já existe 
     public String toString() {
         return "\nPerfilUsuario{id=" + id +
                 "\n descricao='" + descricao + '\'' +

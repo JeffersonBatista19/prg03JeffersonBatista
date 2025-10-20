@@ -9,10 +9,12 @@ package br.com.ifba.atividade08;
  * @author jeffe
  */
 public class Sessao {
+    //atributos
     private Long id;
     private Usuario usuario;
     private String token;
-
+    
+    //classe construtor
     public Sessao(Long id, Usuario usuario, String token) {
         this.id = id;
         this.usuario = usuario;

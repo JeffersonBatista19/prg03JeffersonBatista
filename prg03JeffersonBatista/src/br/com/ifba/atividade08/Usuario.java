@@ -11,13 +11,15 @@ import java.time.LocalDateTime;
  * @author jeffe
  */
 public class Usuario {
+    //atributos
     private Long id;
     private PerfilUsuario perfil;
     private String nomeUsuario;
     private String senha;
     private LocalDateTime ultimoLogin;
     private boolean ativo;
-
+    
+    //Construtor
     public Usuario(Long id, PerfilUsuario perfil, String nomeUsuario, String senha, LocalDateTime ultimoLogin, boolean ativo) {
         this.id = id;
         this.perfil = perfil;
@@ -26,7 +28,8 @@ public class Usuario {
         this.ultimoLogin = ultimoLogin;
         this.ativo = ativo;
     }
-
+    
+    //Getters e setters 
     public Long getId() { 
         return id; 
     }
