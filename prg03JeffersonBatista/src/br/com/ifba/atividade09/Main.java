@@ -16,8 +16,16 @@ public class Main {
     PD.setValor(250);
     PD.imprimirRecibo();
     
+    //Teste com a classe de pagamentos em dinheiro
+    PagamentoCartao PC = new PagamentoCartao(100);
+    PC.imprimirRecibo();
+    PC.setValor(250);
+    PC.imprimirRecibo();
+   
     
-    
-    
+    PagamentoPix PP = new PagamentoPix(100);
+    PP.imprimirRecibo();
+    PP.setValor(250);
+    PP.imprimirRecibo();
     }
 }

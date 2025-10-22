@@ -26,7 +26,7 @@ public class PagamentoDinheiro implements Pagamento{
         this.valor = valor;
     }
     
-    //metodos abstratos (importados da classe Pagamentp) 
+    //metodos abstratos (importados da interface Pagamentp) 
     @Override
     public double calcularTotal() {
         double desconto = valor * 0.10; // calculo da porcentagem do desconto
