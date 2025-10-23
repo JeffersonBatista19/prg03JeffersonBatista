@@ -33,11 +33,12 @@ public class PagamentoPix implements Pagamento {
     }
 
     @Override
-    public void imprimirRecibo() {
-        System.out.println(" ------ RECIBO ------ ");
-        System.out.println(" (Pagamento por Pix) ");
-        System.out.println("Valor: R$ " + getValor());
-        System.out.println("Valor total a pagar após caschback (2%): " + calcularTotal());
+    public String imprimirRecibo() {
+        String recibo = " ------ RECIBO ------ \n " +
+        " (Pagamento por Pix) \n " +
+        "Valor: R$ " + getValor() + "\n" +
+        "Valor total a pagar após caschback (2%): " + calcularTotal();
+        return recibo;
     }
     
     

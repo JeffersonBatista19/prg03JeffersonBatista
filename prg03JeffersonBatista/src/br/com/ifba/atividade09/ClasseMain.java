@@ -8,7 +8,7 @@ package br.com.ifba.atividade09;
  *
  * @author jeffe
  */
-public class Main {
+public class ClasseMain {
     public static void main(String[] args) {
     //Testes com a classe de pagamentos em dinheiro
     PagamentoDinheiro PD = new PagamentoDinheiro(100);

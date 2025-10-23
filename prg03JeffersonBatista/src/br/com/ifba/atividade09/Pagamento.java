@@ -10,5 +10,5 @@ package br.com.ifba.atividade09;
  */
 public interface Pagamento {
     public abstract double calcularTotal();
-    public abstract void imprimirRecibo();
+    public abstract String imprimirRecibo();
 }

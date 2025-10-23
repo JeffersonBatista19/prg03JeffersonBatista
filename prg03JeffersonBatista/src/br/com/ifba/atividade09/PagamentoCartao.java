@@ -34,11 +34,12 @@ public class PagamentoCartao implements Pagamento {
     }
 
     @Override
-    public void imprimirRecibo() {
-        System.out.println(" ------ RECIBO ------ ");
-        System.out.println(" (Pagamento por Catão) ");
-        System.out.println("Valor: R$ " + getValor());
-        System.out.println("Valor total a pagar com taxa aplicada(5%): " + calcularTotal());
+    public String imprimirRecibo() {
+        String recibo = " ------ RECIBO ------ \n" +
+        " (Pagamento por Catão) \n " +
+        "Valor: R$ " + getValor() + "\n" +
+        "Valor total a pagar com taxa aplicada(5%): " + calcularTotal();
+        return recibo;
     }
     
     

@@ -34,11 +34,11 @@ public class PagamentoDinheiro implements Pagamento{
     }
 
     @Override
-    public void imprimirRecibo() {
-        System.out.println(" ------ RECIBO ------ ");
-        System.out.println(" (Pagamento em Dinheiro) ");
-        System.out.println("Valor: R$ " + getValor());
-        System.out.println("Valor total a pagar com desconto(10%): " + calcularTotal());
-        
+    public String imprimirRecibo() {
+        String recibo = " ------ RECIBO ---\n" +
+        " (Pagamento em Dinheiro)\n" +
+        "Valor: R$ " + getValor() + "\n" +
+        "Valor total a pagar com desconto(10%): " + calcularTotal();
+        return recibo;
     }
 }
