@@ -8,20 +8,20 @@ package br.com.ifba.atividade10;
  *
  * @author jeffe
  */
-public class Circulo extends Forma2D {
+public class Circulo extends Forma2D { //herda tudo de Forma2D
     private float raio;
-
+    //Construtor
     public Circulo(float raio) {
         this.raio = raio;
     }
     
     @Override
-    public float obterArea(){
+    public float obterArea(){  //Sobrescreve o Metodo para calcular a area da forma
         return (float) (Math.PI * raio * raio);
     }
     
     @Override
-    public String toString() {
+    public String toString() {  //Sobresreve o metodo toString para exibir as informaçoes da forma
         return "Círculo com raio = " + raio + ", área = " + String.format("%.1f", obterArea());
     }
 }

@@ -8,20 +8,20 @@ package br.com.ifba.atividade10;
  *
  * @author jeffe
  */
-public class Quadrado extends Forma2D {
+public class Quadrado extends Forma2D { //herda tudo de Forma2D
     private float lado;
-
-    public Quadrado(float lado) {
+    //Construtor com parametro float 
+    public Quadrado(float lado) { 
         this.lado = lado;
     }
 
     @Override
-    public float obterArea() {
+    public float obterArea() {  //Sobrescreve o Metodo para calcular a area da forma
         return (float) lado * lado;
     }
 
     @Override
-    public String toString() {
-        return "Quadrado com raio = " + lado + ", área = " + String.format("%.1f", obterArea());
+    public String toString() {  //Sobresreve o metodo toString para exibir as informaçoes da forma
+        return "Quadrado com lado = " + lado + ", área = " + String.format("%.1f", obterArea());
     }
 }

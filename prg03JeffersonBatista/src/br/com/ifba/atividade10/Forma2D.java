@@ -8,6 +8,6 @@ package br.com.ifba.atividade10;
  *
  * @author jeffe
  */
-public abstract class Forma2D extends Forma {
-    public abstract float obterArea();
+public abstract class Forma2D extends Forma {     //herda ou estende da raiz Forma
+    public abstract float obterArea();   //todas as sua "Filhas" herdaram obterAres();
 }

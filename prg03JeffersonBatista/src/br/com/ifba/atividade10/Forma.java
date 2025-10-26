@@ -8,7 +8,8 @@ package br.com.ifba.atividade10;
  *
  * @author jeffe
  */
-public abstract class Forma {
+public abstract class Forma { 
     @Override
     public abstract String toString(); 
+    //Subclasses sobrescreverão toString();
 }
